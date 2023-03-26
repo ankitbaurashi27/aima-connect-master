@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 
 class NewsDetailsPage extends StatefulWidget {
@@ -15,7 +17,7 @@ class _NewsDetailsPageState extends State<NewsDetailsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('News'), centerTitle: true,),
+      appBar: AppBar(title: Text('News'), centerTitle: true,elevation: 0,),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -24,13 +26,21 @@ class _NewsDetailsPageState extends State<NewsDetailsPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                  height: 200,
-                  child: Image.network("${widget.image}", fit: BoxFit.contain,)
+                  height: 180,
+                    decoration: BoxDecoration(
+                      color: Colors.white38,
+                      borderRadius: BorderRadius.circular(15.0),
+                      image: DecorationImage(image: NetworkImage('${widget.image}'), fit: BoxFit.contain,),
+                    ),
                   ),
-                  Divider(height: 20,),
+                  Divider(height: 20,thickness: 2,),
+                  
                   Text('${widget.title}', style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),),
-                  Divider(height: 20,),
-                  Text('${widget.description}')
+                  Divider(height: 20, thickness: 2,),
+                  Card(
+                    color: Colors.grey.shade200,
+                  child: Text('${widget.description}')),
+                  
                 ],
               ),
           ),

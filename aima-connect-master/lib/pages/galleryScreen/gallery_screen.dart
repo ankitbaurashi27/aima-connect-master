@@ -67,7 +67,11 @@ class _MobileGalleryScreenState extends State<MobileGalleryScreen> {
                   padding: const EdgeInsets.all(6.0),
                   child: Container(
                     
-                    child: Image.network(images[index].image, fit: BoxFit.cover,),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15.0),
+                      image: DecorationImage(image: NetworkImage(images[index].image), fit: BoxFit.cover,),
+                    ),
+                  
                   ),
                 ),
               );
