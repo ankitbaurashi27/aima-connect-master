@@ -4,6 +4,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 
+import 'news_container/news_detail_page.dart';
+
 class NewsScreen extends StatefulWidget {
   const NewsScreen({Key? key}) : super(key: key);
 
@@ -48,7 +50,13 @@ class _NewsScreenState extends State<NewsScreen> {
                         "${snapshot.data.docs[i].data()['image']}",
                         width: 50,
                       ),
-                      
+                      onTap: (){
+                          Navigator.push(
+                         context,
+                         MaterialPageRoute(
+                          builder: (context) => NewsDetailsPage(title: "${snapshot.data.docs[i].data()['title']}", image: "${snapshot.data.docs[i].data()['image']}", description: "${snapshot.data.docs[i].data()['description']}",),
+                          ));
+                      },
                   ),
                 );
                 

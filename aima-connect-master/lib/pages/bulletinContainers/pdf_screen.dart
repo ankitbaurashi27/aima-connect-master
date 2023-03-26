@@ -1,4 +1,8 @@
-import 'package:flutter/cupertino.dart';
+
+// ignore_for_file: prefer_const_constructors
+
+import 'package:flutter/material.dart';
+import 'package:pdf_viewer_plugin/pdf_viewer_plugin.dart';
 
 
 class PdfViewScreen extends StatefulWidget {
@@ -11,10 +15,16 @@ class PdfViewScreen extends StatefulWidget {
 }
 
 class _PDFViewScreenState extends State<PdfViewScreen> {
+   
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-         child: Text(widget.url),
+    return Scaffold(
+      body: SafeArea(
+        child: PdfView(
+             path: '',
+        ),
+      ),
     );
   }
 }

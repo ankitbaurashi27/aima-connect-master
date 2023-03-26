@@ -3,7 +3,6 @@
 import 'package:aima_connect/pages/bulletinContainers/pdf_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 
@@ -48,7 +47,7 @@ class PdfListScreen extends StatelessWidget {
                       onTap: (){
                           Navigator.push(
                          context,
-                         MaterialPageRoute(builder: (context) => PdfViewScreen(url: "${snapshot.data.docs[i].data()['name']}",)),
+                         MaterialPageRoute(builder: (context) => PdfViewScreen(url: "${snapshot.data.docs[i].data()['url']}",)),
                             );
                       },
                     ),

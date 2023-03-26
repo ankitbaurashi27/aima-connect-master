@@ -22,8 +22,8 @@ dependencies:
   cloud_firestore: ^4.4.4
   firebase_core: ^2.8.0
   readmore: ^2.1.0
-  flutter_pdfview: ^1.2.7
-
+  pdf_viewer_plugin: ^2.0.1
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
