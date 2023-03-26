@@ -2,6 +2,7 @@ import 'package:aima_connect/models/GalleryModel.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 import '../../repository/gallery_repo.dart';
 
@@ -64,10 +65,9 @@ class _MobileGalleryScreenState extends State<MobileGalleryScreen> {
               return GestureDetector(
                 //onTap: () => routetoDetail(movies2[index]),
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SizedBox(
-                    height: 400,
-                    width: 200,
+                  padding: const EdgeInsets.all(6.0),
+                  child: Container(
+                    
                     child: Image.network(images[index].image, fit: BoxFit.cover,),
                   ),
                 ),
