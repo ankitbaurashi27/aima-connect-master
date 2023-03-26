@@ -2,25 +2,19 @@ import 'package:flutter/material.dart';
 
 import 'bulletinContainers/bulletin.dart';
 
-class Bulletin extends StatelessWidget {
+
+class Bulletin extends StatefulWidget {
   const Bulletin({Key? key}) : super(key: key);
 
   @override
+  State<Bulletin> createState() => _BulletinState();
+}
+
+class _BulletinState extends State<Bulletin> {
+  @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar: AppBar(
-        title: Text('Bulletins'),
-        centerTitle: true,
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          // ignore: prefer_const_literals_to_create_immutables
-          children: [
-            // ignore: prefer_const_constructors
-            BulletinView()
-          ],
-        ),
-      ),
+    return Scaffold(
+      body: PdfListScreen(),
     );
   }
 }

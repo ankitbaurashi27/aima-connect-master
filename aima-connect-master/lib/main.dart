@@ -11,6 +11,7 @@ import 'package:firebase_core/firebase_core.dart';
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
+    name: 'aima-connect',
       options: FirebaseOptions(
     apiKey: "AIzaSyAeKUqnEiXKQUO8RpoWL8nWnAPFxfNXToU",
     projectId: "connect-aima",

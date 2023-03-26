@@ -5,6 +5,7 @@ import 'package:aima_connect/pages/events_screen.dart';
 import 'package:aima_connect/pages/gallery_screen.dart';
 import 'package:aima_connect/pages/home_screen.dart';
 import 'package:aima_connect/pages/login_screen.dart';
+import 'package:aima_connect/pages/news_screen.dart';
 import 'package:aima_connect/pages/registration_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -91,7 +92,12 @@ class _HomeState extends State<Home> {
              ListTile(
               title: const Text('AIMA News'),
               leading: Icon(Icons.newspaper_rounded),
-              onTap: (){},
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NewsScreen()),
+                );
+              },
             ),
             ListTile(
               title: const Text('Upcoming Events'),
