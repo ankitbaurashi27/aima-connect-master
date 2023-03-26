@@ -53,7 +53,7 @@ class _Container1State extends State<Container1> with TickerProviderStateMixin {
               Text(
                 'Promoting Welfare',
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.blue.shade500,
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),
@@ -64,7 +64,7 @@ class _Container1State extends State<Container1> with TickerProviderStateMixin {
               Text(
                 'Of The Industries',
                 style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.blue.shade500,
                     fontSize: 18,
                     fontWeight: FontWeight.bold),
               ),

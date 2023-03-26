@@ -51,13 +51,12 @@ class _MobileGalleryScreenState extends State<MobileGalleryScreen> {
       body: GridView.builder(
           // ignore: prefer_const_constructors
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            childAspectRatio: 0.6,
+            crossAxisCount: 2,
+            childAspectRatio: 0.8,
           ),
           itemCount: images.length,
           itemBuilder: (_, index) {
             if (isLoading) {
-              print('no images');
               return const Center(
                 child: CircularProgressIndicator(),
               );
@@ -69,7 +68,7 @@ class _MobileGalleryScreenState extends State<MobileGalleryScreen> {
                   child: SizedBox(
                     height: 400,
                     width: 200,
-                    child: Image.network(images[index].url),
+                    child: Image.network(images[index].image, fit: BoxFit.cover,),
                   ),
                 ),
               );

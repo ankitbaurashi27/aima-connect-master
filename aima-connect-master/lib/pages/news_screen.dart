@@ -57,7 +57,9 @@ class _NewsScreenState extends State<NewsScreen> {
                           builder: (context) => NewsDetailsPage(title: "${snapshot.data.docs[i].data()['title']}", image: "${snapshot.data.docs[i].data()['image']}", description: "${snapshot.data.docs[i].data()['description']}",),
                           ));
                       },
+                     hoverColor: Colors.blue,
                   ),
+
                 );
                 
               },

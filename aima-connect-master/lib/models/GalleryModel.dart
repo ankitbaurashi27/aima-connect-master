@@ -1,11 +1,13 @@
 class GalleryModel{
-   final String url;
+  final String image;
+  String?  title;
 
-  GalleryModel({required this.url});
+  GalleryModel({required this.image, this.title});
 
   factory GalleryModel.fromJson(dynamic json) {
     return GalleryModel(
-      url: json['url'],
+      image: json['image'],
+      title: json['title'],
     );
   }
 }
